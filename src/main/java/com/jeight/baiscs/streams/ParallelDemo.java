@@ -13,8 +13,5 @@ public class ParallelDemo {
         System.out.println("=======Parallel stream========");
         Stream<Integer> parallelStream = Stream.of(1,2,3,4,5,6);
         parallelStream.parallel().forEach(n->System.out.println(n +" :: "+Thread.currentThread()));
-        List<String> names = Arrays.asList("sachin","sehwag","dhoni");
-        Spliterator<String> spliterator = names.stream().spliterator();
-        spliterator.forEachRemaining(n->System.out.println(n));
     }
 }
